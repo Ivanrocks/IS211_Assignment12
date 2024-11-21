@@ -1,0 +1,239 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Shared heading styles */
+.heading-title,
+.heading-quiz-title,
+.dashboard-title,
+.login-title {
+    color: #4a90e2;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard-subtitle {
+    font-size: 1.5em;
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Shared form container style */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+/* Shared form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.label-text,
+.quiz-label,
+.login-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4a90e2;
+}
+
+.input-field,
+.quiz-input,
+.login-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.submit-btn,
+.quiz-submit-btn,
+.login-submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover,
+.quiz-submit-btn:hover,
+.login-submit-btn:hover {
+    background-color: #357ab8;
+}
+
+/* Back link and logout link styling */
+.back-link,
+.logout-link,
+.page-link,
+.login-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-link:hover,
+.logout-link:hover,
+.page-link:hover,
+.login-link:hover {
+    text-decoration: underline;
+    color: #357ab8;
+}
+
+/* Table styling */
+.table-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Styles for the login form */
+.login-form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.login-form-group {
+    margin-bottom: 15px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-submit-btn:hover {
+    background-color: #357ab8;
+}
+
+/* Dashboard Specific */
+.dashboard-title {
+    margin-top: 20px;
+}
+
+.dashboard-subtitle {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.dashboard table {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.dashboard td a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.dashboard td a:hover {
+    text-decoration: underline;
+}
+
+/* Student Results Specific */
+.results-table {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.results-table th, .results-table td {
+    text-align: center;
+    padding: 10px;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.5em;
+    color: #f44336;
+}
+/* Error message styling */
+.error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Success message styling */
+.success-message {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}

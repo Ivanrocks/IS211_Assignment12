@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1 class="login-title">Login</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+          {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post" action="/login" class="login-form-container">
+        <div class="login-form-group">
+            <label for="username" class="login-label">Username:</label>
+            <input type="text" name="username" id="username" class="login-input" required>
+        </div>
+        <div class="login-form-group">
+            <label for="password" class="login-label">Password:</label>
+            <input type="password" name="password" id="password" class="login-input" required>
+        </div>
+        <div class="login-form-group">
+            <button type="submit" class="login-submit-btn">Login</button>
+        </div>
+    </form>
+</body>
+</html>

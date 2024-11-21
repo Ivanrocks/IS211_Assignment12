@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Quiz Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1 class="heading-title">Add Quiz Result</h1>
+
+    <!-- Error Message Handling -->
+    {% if error %}
+    <p class="error-message">{{ error }}</p>
+    {% endif %}
+
+    <!-- Form to Add Quiz Result -->
+    <div class="form-container">
+        <form method="POST" action="{{ url_for('add_quiz_result') }}">
+            <div class="form-group">
+                <label for="student_id" class="label-text">Select Student</label>
+                <select id="student_id" name="student_id" class="input-field" required>
+                    <option value="">Select a Student</option>
+                    {% for student in students %}
+                    <option value="{{ student[0] }}">{{ student[1] }} {{ student[2] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quiz_id" class="label-text">Select Quiz</label>
+                <select id="quiz_id" name="quiz_id" class="input-field" required>
+                    <option value="">Select a Quiz</option>
+                    {% for quiz in quizzes %}
+                    <option value="{{ quiz[0] }}">{{ quiz[1] }} - {{ quiz[2] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="score" class="label-text">Score</label>
+                <input type="number" id="score" name="score" class="input-field" min="0" max="100" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Result</button>
+        </form>
+    </div>
+
+    <br>
+    <a href="{{ url_for('dashboard') }}" class="back-link">Back to Dashboard</a>
+</body>
+</html>
